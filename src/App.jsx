@@ -1,7 +1,16 @@
-import React from "react";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-  return <div>Assignment-6</div>;
+  return (
+    <div>
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <Hero />
+    </div>
+  );
 };
 
 export default App;
