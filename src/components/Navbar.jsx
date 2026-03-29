@@ -1,14 +1,31 @@
 import { useState } from "react";
 import shoppingCartIcon from "../assets/products/shopping-cart.png";
+import Cart from "./Cart";
 
-const Navbar = () => {
+const Navbar = ({ addCart, setShowProducts }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleCartClick = () => {
+    setShowProducts(false);
+    if (menuOpen) setMenuOpen(false);
+    window.scrollTo({ top: 1000, behavior: "smooth" });
+  };
 
   return (
     <nav className="bg-base-100 shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-primary">DigiTools</h1>
+        <h1
+          className="text-2xl font-bold text-primary cursor-pointer"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          DigiTools
+        </h1>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-6 font-medium">
@@ -33,12 +50,15 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           {/* Cart with badge */}
           <div className="relative">
-            <button className="btn btn-ghost btn-circle">
+            <button
+              onClick={handleCartClick}
+              className="btn btn-ghost btn-circle"
+            >
               <img src={shoppingCartIcon} alt="cart" className="w-5 h-5" />
             </button>
 
             <span className="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-              {"3"}
+              {addCart.length}
             </span>
           </div>
 

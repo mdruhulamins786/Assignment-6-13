@@ -4,8 +4,12 @@ import Navbar from "./components/Navbar";
 import Review from "./components/Review";
 import Products from "./components/Products";
 
+import { ToastContainer } from "react-toastify";
+
 const App = () => {
   const [products, setProducts] = useState([]);
+  const [addCart, setAddCart] = useState([]);
+  const [showProducts, setShowProducts] = useState(true);
 
   useEffect(() => {
     fetch("/data.json")
@@ -16,7 +20,7 @@ const App = () => {
   return (
     <div>
       {/* Navbar */}
-      <Navbar />
+      <Navbar addCart={addCart} setShowProducts={setShowProducts} />
 
       {/* Hero Section */}
       <Hero />
@@ -25,7 +29,16 @@ const App = () => {
       <Review />
 
       {/* Products Cart Section */}
-    <Products products={products}/>
+      <Products
+        products={products}
+        addCart={addCart}
+        setAddCart={setAddCart}
+        showProducts={showProducts}
+        setShowProducts={setShowProducts}
+      />
+
+      {/* Toast Container */}
+      <ToastContainer />
     </div>
   );
 };

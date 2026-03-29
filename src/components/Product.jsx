@@ -1,6 +1,16 @@
 import React from "react";
+import { toast } from "react-toastify";
 
-const Product = ({ products }) => {
+const Product = ({ products, addCart, setAddCart }) => {
+  const handleAddCart = (product) => {
+    if (addCart.find((p) => p.id === product.id)) {
+      toast.error("Product already in cart");
+      return;
+    }
+    toast.success("Product added to cart");
+    setAddCart([...addCart, product]);
+  };
+
   return (
     <>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -19,17 +29,13 @@ const Product = ({ products }) => {
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-semibold mb-2 text-center">
-              {product.name}
-            </h3>
+            <h3 className="text-xl font-semibold mb-2 ">{product.name}</h3>
 
             {/* Description */}
-            <p className="text-gray-500 text-sm text-center mb-4">
-              {product.desc}
-            </p>
+            <p className="text-gray-500 text-sm mb-4">{product.desc}</p>
 
             {/* Price */}
-            <h4 className="text-center mb-4">
+            <h4 className="mb-4">
               <span className="text-2xl font-bold text-primary">
                 ${product.price}
               </span>
@@ -44,7 +50,10 @@ const Product = ({ products }) => {
             </ul>
 
             {/* Button */}
-            <button className="btn btn-primary w-full rounded-full">
+            <button
+              className="btn btn-primary w-full rounded-full"
+              onClick={() => handleAddCart(product)}
+            >
               Buy Now
             </button>
           </div>
