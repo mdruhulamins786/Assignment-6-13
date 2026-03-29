@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Tool",
+    "price": 29,
+    "desc": "Generate high-quality content with advanced AI.",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker"
+    ],
+    "image": "https://img.icons8.com/color/96/artificial-intelligence.png"
+  },
+  {
+    "id": 2,
+    "name": "Design Kit",
+    "price": 49,
+    "desc": "Premium UI kits and templates for designers.",
+    "features": ["Figma files", "Icons library", "Components"],
+    "image": "https://img.icons8.com/color/96/design.png"
+  },
+  {
+    "id": 3,
+    "name": "Marketing Toolkit",
+    "price": 39,
+    "desc": "Boost your marketing with ready-made assets.",
+    "features": ["Ad templates", "Email copy", "SEO tools"],
+    "image": "https://img.icons8.com/color/96/marketing.png"
+  },
+  {
+    "id": 4,
+    "name": "Social Media Pack",
+    "price": 25,
+    "desc": "Ready-made social media templates for all platforms.",
+    "features": ["Instagram posts", "Story templates", "Canva files"],
+    "image": "https://img.icons8.com/color/96/instagram-new.png"
+  },
+  {
+    "id": 5,
+    "name": "Video Editing Bundle",
+    "price": 59,
+    "desc": "Professional video presets and editing tools.",
+    "features": ["Premiere presets", "Transitions", "Color grading LUTs"],
+    "image": "https://img.icons8.com/color/96/video-editing.png"
+  },
+  {
+    "id": 6,
+    "name": "SEO Master Toolkit",
+    "price": 35,
+    "desc": "Improve your website ranking with powerful SEO tools.",
+    "features": ["Keyword research", "SEO audit", "Backlink tools"],
+    "image": "https://img.icons8.com/color/96/seo.png"
+  },
+  {
+    "id": 7,
+    "name": "Freelancer Starter Kit",
+    "price": 19,
+    "desc": "Everything you need to start freelancing online.",
+    "features": ["Proposal templates", "Client scripts", "Portfolio tips"],
+    "image": "https://img.icons8.com/color/96/freelance.png"
+  },
+  {
+    "id": 8,
+    "name": "UI Icons Pack",
+    "price": 15,
+    "desc": "High-quality icons for modern UI design.",
+    "features": ["SVG icons", "Customizable", "Dark & light versions"],
+    "image": "https://img.icons8.com/color/96/icons8.png"
+  }
+]
