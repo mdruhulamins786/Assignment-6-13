@@ -5,11 +5,12 @@ import Review from "./components/Review";
 import Products from "./components/Products";
 
 import { ToastContainer } from "react-toastify";
+import ChooseProducts from "./components/ChooseProducts";
 
 const App = () => {
   const [products, setProducts] = useState([]);
   const [addCart, setAddCart] = useState([]);
-  const [showProducts, setShowProducts] = useState(true);
+  const [showProducts, setShowProducts] = useState(false);
 
   useEffect(() => {
     fetch("/data.json")
@@ -36,6 +37,9 @@ const App = () => {
         showProducts={showProducts}
         setShowProducts={setShowProducts}
       />
+
+      {/* Choose Products Section */}
+      <ChooseProducts />
 
       {/* Toast Container */}
       <ToastContainer />

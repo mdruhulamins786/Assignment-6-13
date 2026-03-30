@@ -18,6 +18,7 @@ const Navbar = ({ addCart, setShowProducts }) => {
         <h1
           className="text-2xl font-bold text-primary cursor-pointer"
           onClick={() => {
+            setShowProducts(true);
             window.scrollTo({
               top: 0,
               behavior: "smooth",
