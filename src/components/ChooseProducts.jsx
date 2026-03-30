@@ -26,7 +26,6 @@ const ChooseProducts = () => {
 
   return (
     <div className="py-16 px-4 bg-gray-50 md:py-40">
-      {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
           Get Started in 3 Steps
@@ -36,7 +35,6 @@ const ChooseProducts = () => {
         </p>
       </div>
 
-      {/* Cards */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {steps.map((step) => (
           <div

@@ -6,6 +6,7 @@ import Products from "./components/Products";
 
 import { ToastContainer } from "react-toastify";
 import ChooseProducts from "./components/ChooseProducts";
+import CartPrice from "./components/CartPrice";
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -40,6 +41,9 @@ const App = () => {
 
       {/* Choose Products Section */}
       <ChooseProducts />
+
+      {/* Cart Price Section */}
+      <CartPrice />
 
       {/* Toast Container */}
       <ToastContainer />
